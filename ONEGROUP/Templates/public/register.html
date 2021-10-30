@@ -1,0 +1,91 @@
+{% extends 'base.html' %}          
+         
+{% block header %}
+  {% block title %}GROUPONE{% endblock %}
+{% endblock %}
+
+{% block content %}
+  {% from "_macro.html" import render_field %}
+  <div class="container text-center">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-5 p-4">
+        <form class="m-auto" method="POST" action="{{ url_for('register')}}">
+            <div class="card-body text-center bg-light bg-opacity-50 fw-bold shadow-lg">
+              {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                    <div class="alert alert-light p-1">{{ message }}</div>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+                <h3 class="text-center"><b>REGISTRO DE USUARIOS</b></h3>
+                <div class="row mb-1">
+                    <div class="col-12 mt-2">
+                      <div class="mb-3 has-validation">
+                        {{ render_field(form.name, class='form-control text-center', placeholder='Ingrese su nombre', style='background-color: rgba(255, 255, 255, 0.7)')}}
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="mb-3">
+                        {{ render_field(form.lastname, class='form-control text-center', placeholder='Ingrese su apellido', style='background-color: rgba(255, 255, 255, 0.7)')}}
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="mb-3">
+                        {{ render_field(form.address, class='form-control text-center', placeholder='Ingrese su dirección', style='background-color: rgba(255, 255, 255, 0.7)')}}
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="mb-3">
+                        {{ render_field(form.celphone, class='form-control text-center', placeholder='Ingrese su numero de telefono', style='background-color: rgba(255, 255, 255, 0.7)')}}
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="mb-3">
+                        {{ render_field(form.username, class='form-control text-center', placeholder='escriba un usuario', style='background-color: rgba(255, 255, 255, 0.7)')}}
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="mb-3">
+                        {{ render_field(form.email, class='form-control text-center', placeholder='ingrese un email', style='background-color: rgba(255, 255, 255, 0.7)')}}
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="mb-3">
+                        {{ render_field(form.password, class='form-control text-center', placeholder='digite una contraseña', style='background-color: rgba(255, 255, 255, 0.7)')}}
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <div class="mb-3">
+                        {{ render_field(form.confirm, class='form-control text-center', placeholder='repetita su contraseña', style='background-color: rgba(255, 255, 255, 0.7)')}}
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <h6 class="text text-white mt-3">
+                        <b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto odio perferendis
+                          laudantium!</b>
+                      </h6> 
+                    </div>
+
+                    <div class="col-lg-12 mb-2">
+                        <button type="submit" class="btn btn-dark w-50">Crear cuenta</button>
+                    </div>
+                </div>
+                <div class="col-lg-12 mt-3">
+                  <a href="{{ url_for('login')}}" class="link-secondary">Ya tengo una cuenta</a>
+                </div>
+            </div>
+        </form>
+        
+      </div>
+   </div><!--cierre del row-->
+</div><!--cierre del container-->
+ 
+{% endblock %} 

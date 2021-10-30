@@ -1,0 +1,82 @@
+{% extends 'private/admin/baseprivate.html' %}  
+
+{% block content %} 
+    <div class="card m-1 ">
+        <div class="card-header">
+            <h3 class="text-bold">Mi perfil</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                 <div class="col-10">
+                    <h2 class="display-4 ml-3">Jesús Alberto</h2>
+                    <h3 class="display-6 ml-3">Ariza Reyes</h3>
+                    <h3 class="display-6 ml-3">CC 1.048.214.251</h3>
+                </div>
+                <div class="col-2">
+                    <img  class="img-thumbnail img-responsive w-100 h-100 shadow-lg" src="https://www.pikpng.com/pngl/m/320-3209514_user-account-person-avatar-png-image-sin-imagen.png">
+                </div>
+           </div>
+        </div>
+        <div class="card-header">
+            <h4 class="text-bold">Información personal</h3>
+        </div>
+        <div class="card-body">
+          
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8 bg-light shadow-lg p-3">
+                <div class="col-lg-12 shadow p-2 mb-3">
+                    <div class="btn-group pull-right w-100">
+                        <button class="btn btn-outline-primary btn-sm"><i class="bi bi-pencil-square"></i>Editar</button>
+                        <button class="btn btn-outline-warning btn-sm"><i class="bi bi-pencil-square"></i>Cambiar usuario</button>
+                        <button class="btn btn-outline-dark btn-sm"><i class="bi bi-pencil-square"></i>Cambiar contraseña</button>
+                        <button class="btn btn-outline-info btn-sm"><i class="bi bi-pencil-square"></i>Cambiar perfil</button>
+                        <button class="btn btn-outline-danger btn-sm"><i class="bi bi-pencil-square"></i>Inactivar</button>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <dl class="col-12"><span class="badge bg-success">Activado</span></dl>
+                    <dl class="col-6">
+                        <dt>usuario:</dt>
+                        <dd>jariza</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Email:</dt>
+                        <dd>Jesús@gmail.com</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Documento:</dt>
+                        <dd>86756565</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Sexo:</dt>
+                        <dd>Masculino</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Nombres:</dt>
+                        <dd>Jesús Alberto</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Apellidos:</dt>
+                        <dd>Ariza reyes</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Ciudad:</dt>
+                        <dd>Barranquilla</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Dirección:</dt>
+                        <dd>Cll 50e # 2 - s11</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Celular:</dt>
+                        <dd>300245146446</dd>
+                    </dl>
+                    <dl class="col-6">
+                        <dt>Ultima conexion:</dt>
+                        <dd>25/10/2021</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div> 
+{% endblock %}

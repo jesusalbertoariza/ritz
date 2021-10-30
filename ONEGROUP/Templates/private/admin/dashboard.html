@@ -1,0 +1,111 @@
+{% extends 'private/admin/baseprivate.html' %}    
+
+{% block content %}
+            <!-- desarrollo del componente otorgado por la Jefa anny-->
+            <div class="card-body m-3" style="min-height: 85vh;">
+                <h2><b>DASBOARD</b></h2><br>
+                <nav class="nav nav-pills flex-column flex-sm-row ">
+                   <a class="flex-sm-fill text-sm-center m-2 btn btn-light btn-lg" href="#"><b>Habitaciones a vender</b><br><span class="display-3">12</span></a>
+                   <a class="flex-sm-fill text-sm-center m-2 btn btn-light btn-lg" href="#"><b>Habitaciones ocupadas</b><br><span class="display-3">3</span></a>
+                   <a class="flex-sm-fill text-sm-center m-2 btn btn-light btn-lg" href="#"><b>Habitaciones sucias</b><br><span class="display-3">4</span></a>
+                   <a class="flex-sm-fill text-sm-center m-2 btn btn-light btn-lg" href="#"><b>Habitaciones limpias</b><br><span class="display-3">5</span></a>
+                </nav>
+                 <br><br><br><br>
+                <div class="row mt-4">
+                   <div class="col-sm-6">
+                     <div class="card">
+                       <div class="card-header">
+                         <nav class="navbar navbar-light bg-light">
+                            <div class="container-fluid">
+                              <a class="navbar-brand"><h2>Checkin</h2></a>
+                              <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark" type="submit">Search</button>
+                              </form>
+                            </div>
+                          </nav>
+                       </div>
+                       <div class="card-body">
+                         <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">N° de reserva</th>
+                                <th scope="col">Fecha de ingreso</th>
+                                <th scope="col">Nombre del cliente</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>1544</td>
+                                <td>11/10/2021</td>
+                                <td>Jesús Ariza Reyes</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>678</td>
+                                <td>10/10/2021</td>
+                                <td>Anny ruiz</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>5466</td>
+                                <td>12/10/2021</td>
+                                <td>Omar camilo</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="col-sm-6">
+                     <div class="card">
+                       <div class="card-header">
+                         <nav class="navbar navbar-light bg-light">
+                            <div class="container-fluid">
+                              <a class="navbar-brand"><h2>Checkout</h2></a>
+                              <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-dark" type="submit">Search</button>
+                              </form>
+                            </div>
+                          </nav>
+                       </div>
+                       <div class="card-body">
+                         <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">N° de reserva</th>
+                                <th scope="col">Fecha de ingreso</th>
+                                <th scope="col">Nombre del cliente</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>1544</td>
+                                <td>11/10/2021</td>
+                                <td>Jesús Ariza Reyes</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>678</td>
+                                <td>10/10/2021</td>
+                                <td>Anny ruiz</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>5466</td>
+                                <td>12/10/2021</td>
+                                <td>Omar camilo</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                       </div>
+                     </div>
+                   </div>
+                </div>
+            </div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'private/admin/baseprivate.html' %}     
+
+{% block content %}
+  {% from "_macro.html" import render_field %}
+            <!-- desarrollo del componente otorgado por la Jefa anny-->
+                <h4>AGREGAR HABITACION</h4>
+                <div class="row d-flex justify-content-center mt-4">
+                    <div class="col-lg-6"> 
+                      {% from "_macro.html" import render_field %}
+                      <div class="row bg-dark bg-opacity-50 p-3 fw-bold">
+                       <form method="POST" action="{{ url_for('add_habitacion')}}">
+                          <div class="col-lg-12">
+                                <div class="form-group">
+                                {{ render_field(form.nombre, class='form-control text-center', placeholder='Ingrese su nombre', style='background-color: rgba(255, 255, 255, 0.7)')}}     
+                              </div>
+                            </div>
+                            <div class="col-lg-12">
+                              <div class="form-group">
+                                {{ render_field(form.numero, class='form-control text-center', placeholder='Ingrese su nombre', style='background-color: rgba(255, 255, 255, 0.7)')}}     
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                  {{ render_field(form.costo, class='form-control text-center', placeholder='Ingrese su nombre', style='background-color: rgba(255, 255, 255, 0.7)')}}     
+                              </div>
+                            </div>
+                            <div class="col-lg-12">
+                              <div class="form-group">
+                                {{ render_field(form.medidas, class='form-control text-center', placeholder='Ingrese su nombre', style='background-color: rgba(255, 255, 255, 0.7)')}}     
+                            </div>
+                          </div>
+                          </div>
+                          <div class="col-lg-12">
+                              <div class="form-group mb-3">
+                                  <label class="input-group" for="inputGroupSelect01">Estado</label>
+                                  <select name="estado" class="form-select" id="inputGroupSelect01">
+                                    <option value="1" selected>Activo</option>
+                                    <option value="2">Desocupado</option>
+                                    <option value="3">ocupado</option>
+                                    <option value="4">sucio</option>
+                                  </select>
+                                </div>
+                          </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="imagenhabitacion">Imagen</label><br>
+                                    <input disabled="disabled" class="form-control" type="file" name="imagenhabitacion" id="imagenhabitacion">
+                              </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="descripcionhabitacion">Descripcion</label><br>
+                                    <textarea name="descripcion"  class="form-control" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-lg-12  text-center p-4">
+                                  <a href="{{ url_for('habitaciones')}}" class="btn btn-secondary">Cancelar</a>
+                                  <button type="submit" class="btn btn-dark">Agregar</button>
+                            </div>
+                      </form>
+                    </div>
+                </div>
+            </div>   
+{% endblock %}
+

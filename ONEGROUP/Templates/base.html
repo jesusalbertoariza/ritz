@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>{% block title %}{% endblock %} - GROUPONE</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }} ">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+    </head>
+    <body style="background:linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url('static/background.jpg');">
+        <h1 class="text-center text-white d-none d-lg-block site-heading">
+            <span class="site-heading-lower"><br>
+                <b>Ritz-Carlton Jakarta Tower I</b><br>
+            </span>
+        </h1>
+        <nav class="navbar navbar-dark bg-opacity-75 navbar-expand-lg bg-dark py-lg-4 fixed-top" id="mainNav">
+            <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">hotel ritz</a>
+                <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive">
+                    <span class="visually-hidden">Navegación</span><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">contacto</a></li>
+                        <li class="nav-item">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                <item class="bi bi-box-arrow-right">Opciones de acceso</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-start bg-secondary bg-opacity-75" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasWithBothOptionsLabel">Opciones de acceso</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link"  href="{{ url_for('login') }}">Inciar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link"  href="{{ url_for('register') }}">Registrase</a></li>
+                    <li class="nav-item"><a class="nav-link"  href="static/download/MANUAL_ POLÍTICAS_PRIVACIDAD_Y_TRATAMIENTO_DATOS_PERSONALES.pdf"  download>Politicas de Privacidad y <br> tratamiento de datos personales</a></li>
+                </ul>
+            </div>
+        </div>
+        <section class="page-section clearfix">
+            <div class="container">
+                {% block content %}
+                
+                {% endblock %}
+            </div>
+        </section>
+        <footer class="text-center footer text-faded py-5">
+            <div class="container">
+                <p class="m-0 small">Copyright&nbsp;©&nbsp;<br><strong>Ritz-Carlton Jakarta Tower I&nbsp;</strong>2021</p>
+            </div>
+        </footer>
+        <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

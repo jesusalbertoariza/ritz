@@ -1,0 +1,139 @@
+
+{% extends 'private/cliente/basecliente.html' %}   
+
+{% block content %}
+            <!-- desarrollo del componente otorgado por la Jefa anny-->
+            <div class="card-body m-3 shadow-lg">
+                <h2><b>SOLICITAR HABITACIÓN</b></h2><br>
+                    <div class="row p-3 d-flex justify-content-center">
+                            <div class='col-3'>
+                                <h5 class='labels-reserva'>CHECK-IN</h5>
+                                <input class='form-control' type="date" id="check_in" name="check_in">
+                            </div>
+                            <div class='col-3'>
+                                <h5 class='labels-reserva'>CHECK-OUT</h5>
+                                <input class='form-control' type="date" id="check_out" name="check_out">
+                            </div>
+                            <div class='col-3'>
+                                <h5 class='labels-reserva'>N.PERSONAS</h5>
+                                <select class="form-select" aria-label="Default select example">
+                                    {% for i in range(1,5):%}
+                                    <option value="1">{{i}}</option>
+                                    {%endfor%}
+                                  </select>
+                            </div>
+                            <div class='col-3 text-center'>
+                                <br>
+                                <button type="button" class="btn btn-dark btn-lg btn-reservar">RESERVAR</button>
+                            </div>               
+                        </div>
+                        <div class="card text-dark mb-3 p-3">
+                            <h3>HABITACIÓN 1</h3>
+                            <div class="container px-5 py-4 border container ">
+                                <div class="row">
+                                    <div class="col-5 text-center">
+                                        <img src="{{url_for('static', filename='habitacion.jpg')}}" width='90%' alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h3>Habitacion doble estandar</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                        <table class="table text-center fw-bold">
+                                            <tr>
+                                                <td><i class="bi bi-wifi display-4"></i><br>Wifi gratis</td>
+                                                <td><i class="bi bi-thermometer-snow display-4"></i><br>Acondicionado</td>
+                                                <td><i class="bi bi-thermometer-low display-4"></i><br>Calefaccion</td>
+                                                <td><i class="bi bi-water display-4"></i><br>Baño privado</td>
+                                            </tr>
+                                        </table>
+                                        <h6 class="text-danger fw-bold">Aun no has calificado esta habitación</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                        <div class="card text-dark mb-3 p-3">
+                            <h3>HABITACIÓN 2</h3>
+                            <div class="container px-5 py-4 border container ">
+                                <div class="row">
+                                    <div class="col-5 text-center">
+                                        <img src="{{url_for('static', filename='habitacion.jpg')}}" width='90%' alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h3>Habitacion doble estandar</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                        <table class="table text-center fw-bold">
+                                            <tr>
+                                                <td><i class="bi bi-wifi display-4"></i><br>Wifi gratis</td>
+                                                <td><i class="bi bi-thermometer-snow display-4"></i><br>Acondicionado</td>
+                                                <td><i class="bi bi-thermometer-low display-4"></i><br>Calefaccion</td>
+                                                <td><i class="bi bi-water display-4"></i><br>Baño privado</td>
+                                            </tr>
+                                        </table>
+                                        <h6 class="text-danger fw-bold">Aun no has calificado esta habitación</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+
+                        <div class="card text-dark mb-3 p-3">
+                            <h3>HABITACIÓN 3</h3>
+                            <div class="container px-5 py-4 border container ">
+                                <div class="row">
+                                    <div class="col-5 text-center">
+                                        <img src="{{url_for('static', filename='habitacion.jpg')}}" width='90%' alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h3>Habitacion doble estandar</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                        <table class="table text-center fw-bold">
+                                            <tr>
+                                                <td><i class="bi bi-wifi display-4"></i><br>Wifi gratis</td>
+                                                <td><i class="bi bi-thermometer-snow display-4"></i><br>Acondicionado</td>
+                                                <td><i class="bi bi-thermometer-low display-4"></i><br>Calefaccion</td>
+                                                <td><i class="bi bi-water display-4"></i><br>Baño privado</td>
+                                            </tr>
+                                        </table>
+                                        <h6 class="text-danger fw-bold">Aun no has calificado esta habitación</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+
+                        <div class="card text-dark mb-3 p-3">
+                            <h3>HABITACIÓN 4</h3>
+                            <div class="container px-5 py-4 border container ">
+                                <div class="row">
+                                    <div class="col-5 text-center">
+                                        <img src="{{url_for('static', filename='habitacion.jpg')}}" width='90%' alt="">
+                                    </div>
+                                    <div class="col-7">
+                                        <h3>Habitacion doble estandar</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                        <table class="table text-center fw-bold">
+                                            <tr>
+                                                <td><i class="bi bi-wifi display-4"></i><br>Wifi gratis</td>
+                                                <td><i class="bi bi-thermometer-snow display-4"></i><br>Acondicionado</td>
+                                                <td><i class="bi bi-thermometer-low display-4"></i><br>Calefaccion</td>
+                                                <td><i class="bi bi-water display-4"></i><br>Baño privado</td>
+                                            </tr>
+                                        </table>
+                                        <h6 class="text-danger fw-bold">Aun no has calificado esta habitación</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+            </div>
+            <script  src="{{ url_for('static', filename='scripts.js') }}"></script>
+{% endblock %}
+

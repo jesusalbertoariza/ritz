@@ -1,0 +1,79 @@
+
+{% extends 'private/cliente/basecliente.html' %}   
+
+{% block content %}
+<div class="container-fluid px-5 py-4">
+    <div class="row">
+        <div class="col-6 text-center">
+            <img class="img-thumbnail" src="{{url_for('static', filename='habitacion.jpg')}}" width='90%' alt="">
+        </div>
+        <div class="col-6">
+            <h3>Habitacion doble estandar</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla 
+                pariatur.
+            </p>
+            <table class="table text-center fw-bold">
+                <tr>
+                    <td><i class="bi bi-wifi display-4"></i><br>Wifi gratis</td>
+                    <td><i class="bi bi-thermometer-snow display-4"></i><br>Acondicionado</td>
+                    <td><i class="bi bi-thermometer-low display-4"></i><br>Calefaccion</td>
+                    <td><i class="bi bi-water display-4"></i><br>Baño privado</td>
+                </tr>
+            </table>
+            <br>
+            <h4 class="text-danger fw-bold">Aun no has calificado esta habitación</h4>
+        </div>
+    </div>
+    <form action="/comentarios" method="post">
+        <div class="row mt-5">
+            <div class="col-6 text-center">
+                <h4 class="fw-bold">Editar calificacion:</h4>
+            </div>
+            <div class="col-6 text-warning">
+                <i id="s1" class="bi bi-star display-5" alt="1" onmouseover="pintar(1)"></i>
+                <i id="s2" class="bi bi-star display-5" alt="2" onmouseover="pintar(2)"></i>
+                <i id="s3" class="bi bi-star display-5" alt="3" onmouseover="pintar(3)"></i>
+                <i id="s4" class="bi bi-star display-5" alt="4" onmouseover="pintar(4)"></i>
+                <i id="s5" class="bi bi-star display-5" alt="5" onmouseover="pintar(5)"></i>
+                <input type="text" class="d-none calificacion" name="rating" value="0">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6 text-center">
+                <h4 class="fw-bold">Editar comentario:</h4>
+            </div>
+            <div class="col-6">
+                <textarea class="form-control" placeholder="Crea tu comentario..." rows="5" name="comentario"></textarea>
+            </div>
+        </div>
+        <div class="mt-5 text-end">
+            <button class="btn-lg btn-dark fw-bold " type="submit">GUARDAR</button>
+        </div>
+    </form>
+</div>
+<script>
+let star1 = document.querySelector('#s1')
+let star2 = document.querySelector('#s2')
+let star3 = document.querySelector('#s3')
+let star4 = document.querySelector('#s4')
+let star5 = document.querySelector('#s5')
+
+let stars = [star1,star2,star3,star4,star5]
+
+function pintar(numero){
+  document.querySelector('.calificacion').setAttribute('value',numero)
+  stars.forEach(function(star){
+    if(parseInt(star.getAttribute('alt'))<=numero){
+      star.setAttribute('class',' bi bi-star-fill display-5')
+    }else{
+      star.setAttribute('class','bi bi-star display-5')
+    }
+  }); 
+}
+</script>
+{% endblock %}
+

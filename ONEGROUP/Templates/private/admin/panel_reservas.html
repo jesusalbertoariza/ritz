@@ -1,0 +1,43 @@
+{% extends 'private/admin/baseprivate.html' %}   
+
+{% block content %}
+            <!-- desarrollo del componente otorgado por la Jefa anny-->
+            <div class="card-body m-3" style="min-height: 85vh;">
+                <h2><b>PANEL DE RESERVAS</b></h2><br>
+                <nav class="nav nav-pills flex-column flex-sm-row ">
+                   <a class="flex-sm-fill text-sm-center m-2 btn btn-light btn-lg" href="{{ url_for('panel_reservas')}}"><b>Historial de reservas</b></a>
+                   <a class="flex-sm-fill text-sm-center m-2 btn btn-light btn-lg" href="{{ url_for('add_reservas')}}"><b>Crear reservas</b></a>
+                </nav>
+
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">N° de reserva</th>
+                        <th scope="col">Fecha de ingreso</th>
+                        <th scope="col">Nombre del cliente</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>1544</td>
+                        <td>11/10/2021</td>
+                        <td>Jesús Ariza Reyes</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>678</td>
+                        <td>10/10/2021</td>
+                        <td>Anny ruiz</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>5466</td>
+                        <td>12/10/2021</td>
+                        <td>Omar camilo Barros</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+{% endblock %}

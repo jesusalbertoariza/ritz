@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola, que tal {{nombre}}</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mi sitio web con jinja y flask</h1>
+        <p>Esta pagina carga contenido dinamico</p>
+    </header>
+    <h2>Vamos a saludar</h2>
+    {% if nombre %}
+    <h1>Hola {{nombre}}</h1>
+    <p>Como estas?</p>
+    {%else%}
+    <p>No has indicado un nombre</p>
+    {%endif%}
+</body>
+
+</html>
